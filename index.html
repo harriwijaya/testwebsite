@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
-<body>
+   <head>
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   </head>
+   <body>
+   <!-- Plotly chart will be drawn inside this div -->
+   <div id="plotly-div"></div>
+     <script>
+     var data = [
+  {
+    stream: {
+      maxpoints: 500, 
+      token: "your_stream_token_here"
+    }, 
+    type: "scatter"
+  }
+];
+Plotly.plot('plotly-div', data);
+     </script>
+   </body>
+ </html>
 
-<h1>My First JavaScript</h1>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
-
-</body>
-</html> 
